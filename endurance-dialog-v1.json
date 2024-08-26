@@ -1,0 +1,364 @@
+{
+  "name": "Endurance-dialog",
+  "type": "dialog",
+  "valid": true,
+  "counts": {
+    "intents": 3,
+    "entities": 2,
+    "dialog_nodes": 8
+  },
+  "status": "Available",
+  "created": "2023-09-25T16:28:52.322Z",
+  "updated": "2023-09-25T16:28:52.322Z",
+  "language": "en",
+  "skill_id": "e427abdf-6fd8-4db5-acd1-cc3735711690",
+  "snapshot": "1",
+  "workspace": {
+    "created": "2023-09-25T16:28:52.322Z",
+    "intents": [
+      {
+        "intent": "medication_info",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "examples": [
+          {
+            "text": "Tell me about Donepezil",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          },
+          {
+            "text": "Are there any side effects of Rivastigmine?",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          },
+          {
+            "text": "What medications are available for dementia?",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "intent": "comfort",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "examples": [
+          {
+            "text": "I'm scared for my loved one",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          },
+          {
+            "text": "I feel so lost",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          },
+          {
+            "text": "Is there hope for a cure?",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "intent": "ask_about_dementia",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "examples": [
+          {
+            "text": "How do I know if someone has dementia?",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          },
+          {
+            "text": "What is dementia?",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          },
+          {
+            "text": "Tell me about Alzheimer's",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z"
+          }
+        ],
+        "description": ""
+      }
+    ],
+    "updated": "2023-09-25T16:28:52.322Z",
+    "entities": [
+      {
+        "entity": "Symptom",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "forgetfulness",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "mood swings",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "confusion",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z",
+            "synonyms": []
+          }
+        ],
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "fuzzy_match": true
+      },
+      {
+        "entity": "Medication",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Donepezil",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Rivastigmine",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Galantamine",
+            "created": "2023-09-25T16:28:57.086Z",
+            "updated": "2023-09-25T16:28:57.086Z",
+            "synonyms": []
+          }
+        ],
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "fuzzy_match": true
+      }
+    ],
+    "language": "en",
+    "metadata": {
+      "skill": {
+        "counts": {
+          "intents": 3,
+          "entities": 2,
+          "dialog_nodes": 8
+        }
+      },
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "dialog_nodes": [
+      {
+        "type": "standard",
+        "title": "Symptom",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Some common symptoms of dementia include:\n● Forgetfulness or memory loss\n● Difficulty concentrating or thinking clearly\n● Confusion about time and place\n● Mood swings or personality changes\n● Trouble understanding visual information, like reading\n● Do keep in mind that many people experience some of these symptoms from time to \ntime. It's a pattern of ongoing decline that may suggest dementia. Always consult with \na healthcare professional for an accurate diagnosis.\r"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1695628915194",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "conditions": "@Symptom",
+        "dialog_node": "node_2_1695629610122",
+        "previous_sibling": "node_10_1695629040338"
+      },
+      {
+        "type": "standard",
+        "title": "Health Assistant for Dementia",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "There are two types of medication currently available, cholinesterase inhibitors and memantine."
+                },
+                {
+                  "text": "Donepezil, sold under the brand name Aricept among others, is a medication used to treat dementia of the Alzheimer's type. It appears to result in a small benefit in mental function and ability to function. Use, however, has not been shown to change the progression of the disease. "
+                },
+                {
+                  "text": "Rivastigmine may cause nausea, vomiting, diarrhea, stomach pain, loss of appetite, or weight loss. Tell your doctor if any of these problems are severe, because they could cause other health problems such as dehydration."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1695628915194",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "conditions": "#medication_info",
+        "dialog_node": "node_10_1695629040338",
+        "previous_sibling": "node_2_1695629032594"
+      },
+      {
+        "type": "standard",
+        "title": "Health Assistant for Dementia",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "I'm truly sorry to hear that. Remember, you're not alone in this journey. Many support \ngroups and resources are available for caregivers and family members. Take one day at a \ntime, and don't hesitate to seek help or support when needed. "
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1695628915194",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "conditions": "#comfort",
+        "dialog_node": "node_2_1695629032594",
+        "previous_sibling": "node_2_1695629025713"
+      },
+      {
+        "type": "standard",
+        "title": "Medication",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Donepezil (Aricept) is approved to treat all stages of the disease. It's taken once a day as a pill.\nGalantamine (Razadyne) is approved to treat mild to moderate Alzheimer's. ...\nRivastigmine (Exelon) is approved for mild to moderate Alzheimer's disease."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1695628915194",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "dialog_node": "node_10_1695629754371",
+        "previous_sibling": "node_2_1695629610122"
+      },
+      {
+        "type": "standard",
+        "title": "Health Assistant for Dementia",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "A progressive disease that destroys memory and other important mental functions.\nBrain cell connections and the cells themselves degenerate and die, eventually destroying memory and other important mental functions."
+                },
+                {
+                  "text": "Dementia is not a specific disease but is rather a general term for the impaired ability to remember, think, or make decisions that interferes with doing everyday activities. Alzheimer's disease is the most common type of dementia. Though dementia mostly affects older adults, it is not a part of normal aging."
+                },
+                {
+                  "text": "Experiencing memory loss, poor judgment, and confusion.\nDifficulty speaking, understanding and expressing thoughts, or reading and writing.\nWandering and getting lost in a familiar neighborhood.\nTrouble handling money responsibly and paying bills."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "node_1_1695628915194",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "conditions": "#ask_about_dementia",
+        "dialog_node": "node_2_1695629025713"
+      },
+      {
+        "type": "standard",
+        "title": "Anything else",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "I didn't understand. You can try rephrasing."
+                },
+                {
+                  "text": "Can you reword your statement? I'm not understanding."
+                },
+                {
+                  "text": "I didn't get your meaning."
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "conditions": "anything_else",
+        "dialog_node": "Anything else",
+        "previous_sibling": "node_1_1695628915194",
+        "disambiguation_opt_out": true
+      },
+      {
+        "type": "folder",
+        "title": "Chitchat",
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "dialog_node": "node_1_1695628915194",
+        "previous_sibling": "Welcome"
+      },
+      {
+        "type": "standard",
+        "title": "Welcome",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Hello. How can I help you?"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "created": "2023-09-25T16:28:57.086Z",
+        "updated": "2023-09-25T16:28:57.086Z",
+        "conditions": "welcome",
+        "dialog_node": "Welcome"
+      }
+    ],
+    "counterexamples": [],
+    "learning_opt_out": false
+  },
+  "description": "",
+  "assistant_id": "b3bdcc53-5729-4e4c-9575-733531f7bcd5",
+  "dialog_settings": {
+    "source_assistant": "907724d9-02ab-466e-9890-26617803e647"
+  },
+  "assistant_references": [
+    {
+      "name": "Endurance",
+      "assistant_id": "907724d9-02ab-466e-9890-26617803e647",
+      "skill_reference": "main skill"
+    }
+  ]
+}
